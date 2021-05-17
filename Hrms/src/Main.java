@@ -18,11 +18,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		SystemStaff systemStaff = new SystemStaff(null, null, 0, "Kerem", "Varýþ", "Bilgisayar Mühendisi");
+		SystemStaff systemStaff = new SystemStaff(null, null, 0, "Kerem", "VarÃ½Ã¾", "Bilgisayar MÃ¼hendisi");
 		
 		EmailVerificationManager emailVerificationManager = new EmailVerificationManager(new InMemoryUserDao());
 		
-		JobSeekers jobSeeker1 = new JobSeekers("engindemirog@gmail.com","12345", 1,"Engin","Demiroð",28861499108L,LocalDate.of(1985,6,1));
+		JobSeekers jobSeeker1 = new JobSeekers("engindemirog@gmail.com","12345", 1,"Engin","DemiroÃ°",28861499108L,LocalDate.of(1985,6,1));
 		JobSeekerVerificationManager jobSeekerVerificationManager = new JobSeekerVerificationManager(new MernisManagerAdapter(), emailVerificationManager);
 		jobSeekerVerificationManager.verification(jobSeeker1);
 		
@@ -34,7 +34,7 @@ public class Main {
 		
 		System.out.println("\n\n----------\n\n");
 
-		JobPosition jobPosition1 = new JobPosition("Yazýlým Mühendisi");
+		JobPosition jobPosition1 = new JobPosition("YazÃ½lÃ½m MÃ¼hendisi",5);
 		JobPositionManager jobPositionManager = new JobPositionManager(new InMemoryJobPositionDao());
 		jobPositionManager.add(jobPosition1);
 		jobPositionManager.getAll();
